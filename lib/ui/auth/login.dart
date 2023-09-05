@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nexus_2/ui/college/main_home_screen.dart';
+// import 'package:nexus_2/ui/home/home_screen.dart';
 import 'package:nexus_2/ui/home/widgets/button/button_filled.dart';
 
 class Login extends StatefulWidget {
@@ -41,7 +43,7 @@ class _LoginState extends State<Login> {
           Column(
             children: [
               TextFormField(
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                 ),
                 controller: _emailController,
@@ -49,12 +51,12 @@ class _LoginState extends State<Login> {
                 decoration: InputDecoration(
                   hintText: "Enter email",
                   labelText: "Email",
-                  prefixIcon: Icon(
+                  prefixIcon: const Icon(
                     Icons.person_outline,
                     // size: screenHeight / 29.2333,
                     color: Colors.white,
                   ),
-                  labelStyle: TextStyle(color: Colors.grey
+                  labelStyle: const TextStyle(color: Colors.grey
                       // fontSize: screenHeight / 54.8125,
                       ),
                   hintStyle: TextStyle(
@@ -72,7 +74,7 @@ class _LoginState extends State<Login> {
               //   height: screenHeight / 87.7,
               // ),
               TextFormField(
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                 ),
                 controller: _passwordController,
@@ -80,12 +82,12 @@ class _LoginState extends State<Login> {
                 decoration: InputDecoration(
                   hintText: "Enter password",
                   labelText: "Password",
-                  prefixIcon: Icon(
+                  prefixIcon: const Icon(
                     Icons.lock_outline,
                     // size: screenHeight / 29.2333,
                     color: Colors.white,
                   ),
-                  labelStyle: TextStyle(
+                  labelStyle: const TextStyle(
                     color: Colors.grey,
                     // fontSize: screenHeight / 54.8125,
                   ),
@@ -117,7 +119,8 @@ class _LoginState extends State<Login> {
                 height: screenHeight / 10,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen2())),
                 child: ButtonFilled(
                   label: 'Log In',
                   height: screenHeight / 15,

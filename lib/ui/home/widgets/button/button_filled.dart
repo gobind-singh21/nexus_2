@@ -29,7 +29,7 @@ class ButtonFilled extends StatelessWidget {
         label,
         style: TextStyle(
           color: labelColor,
-          fontSize: MediaQuery.of(context).size.width / 60,
+          fontSize: MediaQuery.of(context).size.width / 70,
         ),
       ),
     );
